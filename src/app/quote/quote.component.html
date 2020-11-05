@@ -5,8 +5,8 @@
       {{quote.name}}  
       <li >{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li>  
       <button (click)='toggleDetails(i)'>Toggle Details</button>
-      <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-quote-detail>
-  
+      <!--<app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>-->
+      <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
       </div>
     </ul>
     <p *ngIf='quotes.length > 5'>Your goals are too many</p>
