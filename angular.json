@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "TipyQuote"
+    }
+  },
+  "defaultProject": "TipyQuote",
+  "cli": {
+    "analytics": "8248e971-7b2f-4c1e-875d-cbacf9b8727a"
+  }
 }
