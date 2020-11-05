@@ -1,9 +1,11 @@
 <div>
     <h1>My Goals</h1>
     <ul>
-      <li *ngFor='let quote of quotes'>
-      {{quote.name}}    
-      <app-quote-detail [quote]='quote'></app-quote-detail>
+      <li *ngFor='let quote of quotes;let i = index'>
+      {{quote.name}}  
+      <li >{{quote.name}} due on {{quote.completeDate}}</li>  
+      <button (click)='toggleDetails(i)'>Toggle Details</button>
+      <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeGoal($event,i)'></app-quote-detail>
   
       </li>
     </ul>
