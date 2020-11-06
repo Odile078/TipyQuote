@@ -1,6 +1,30 @@
  
  <div>
     <h1>My Goals</h1>
+    <div class="container ">
+      <div *ngFor='let quote of quotes;let i = index' class="quoteshow">
+        <div class="row ">
+          <div class="col-md-8">
+            <p>{{quote.quotess}}  </p>
+          </div>
+          <div class="col-md-4">
+            phbvjkurivbrjkjknbgn
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p>fdbmngfthmksfgsf</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <p>fdbmngfthmksfgsf</p>
+          </div>
+        </div>
+        
+      </div>
+
+    </div>
     <ul>
       <div *ngFor='let quote of quotes;let i = index'>
       {{quote.name}}  
