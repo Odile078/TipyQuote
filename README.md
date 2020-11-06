@@ -38,7 +38,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ## Installation / Setup instruction
 * Open Terminal {Ctrl+Alt+T}
 
-* git clone ```https://github.com/Odile33/TipyQuotes.git```
+* git clone ```https://github.com/Odile078/TipyQuote.git```
 
 * cd Quotes-app
 
