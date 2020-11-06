@@ -1,3 +1,5 @@
 .quoteshow{
     background-color: aquamarine;
+    border-radius: 4px;
+    border: 1px solid #eee;
 }
