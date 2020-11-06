@@ -1,43 +1,45 @@
- 
- <div>
-  <h2>Discover Quotes!</h2>
-  <p class="quotetxt">Find your Great Quotes here at TipyQuotes & share your favorite quotes.
-
-  </p>
-  <p class="quotetxt">Upvote and Downvote the quotes according to your satisfaction.</p>
-  <div>
-      <h3 class="card card-container">Quotes</h3>
-  </div>
-    <div class="container-fluid ">
-
-      <div *ngFor='let quote of quotes;let i = index' >
-        <div class="container ">
-            <div class="row ">
-              <div class="col-md-8">
-                <p>{{quote.quotess}}  </p>
-              </div>
-              <div class="col-md-4">
-                <p > on {{quote.completeDate|date|uppercase}}</p> 
-              </div>
-            </div>
-            
-            <div class="row">
-              <div class="col-md-6">
-                <p>Quote author: {{quote.author}} </p>
-                <button (click)='toggleDetails(i)'>Toggle Details</button>
-                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
-                <!--<app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>-->
-              </div>
-            </div>
-        </div>
-      </div>
-
-    </div>
+<div class="row"> 
+  <div class="col-md-6">
+    <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     
-    <p *ngIf='quotes.length > 5'>Your goals are too many</p>
-</div>
+  </div>  
+    <div class="col-md-6">
+      <h2>Discover Quotes!</h2>
+      <p class="quotetxt">Find your Great Quotes here at TipyQuotes & share your favorite quotes.
 
-<div class="col-md-6">
-  <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
-  
+      </p>
+      <p class="quotetxt">Upvote and Downvote the quotes according to your satisfaction.</p>
+      <div>
+          <h3 class="card card-container">Quotes</h3>
+      </div>
+        <div class="container-fluid ">
+
+          <div *ngFor='let quote of quotes;let i = index' >
+            <div class="container ">
+                <div class="row ">
+                  <div class="col-md-8">
+                    <p>{{quote.quotess}}  </p>
+                  </div>
+                  <div class="col-md-4">
+                    <p > on {{quote.completeDate|date|uppercase}}</p> 
+                  </div>
+                </div>
+                
+                <div class="row">
+                  <div class="col-md-6">
+                    <p>Quote author: {{quote.author}} </p>
+                    <button (click)='toggleDetails(i)'>Toggle Details</button>
+                    <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+                    <!--<app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>-->
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+        
+        <p *ngIf='quotes.length > 5'>Your goals are too many</p>
+    </div>
+
+    
 </div> 
