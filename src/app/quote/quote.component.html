@@ -1,6 +1,13 @@
  
  <div>
-    <h1>My Goals</h1>
+  <h2>Discover Quotes!</h2>
+  <p class="quotetxt">Find your Great Quotes here at TipyQuotes & share your favorite quotes.
+
+  </p>
+  <p class="quotetxt">Upvote and Downvote the quotes according to your satisfaction.</p>
+  <div>
+      <h3 class="card card-container">Quotes</h3>
+  </div>
     <div class="container-fluid ">
 
       <div *ngFor='let quote of quotes;let i = index' >
@@ -19,23 +26,14 @@
                 <p>Quote author: {{quote.author}} </p>
                 <button (click)='toggleDetails(i)'>Toggle Details</button>
                 <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
-                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+                <!--<app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>-->
               </div>
             </div>
         </div>
       </div>
 
     </div>
-    <ul>
-      <div *ngFor='let quote of quotes;let i = index'>
-      {{quote.name}}  
-      <li >{{quote.name}} due on {{quote.completeDate|date|uppercase}}</li> 
-      <li >{{quote.author}} </li>   
-      <button (click)='toggleDetails(i)'>Toggle Details</button>
-      <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
-      <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
-      </div>
-    </ul>
+    
     <p *ngIf='quotes.length > 5'>Your goals are too many</p>
 </div>
 
