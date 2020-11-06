@@ -2,15 +2,15 @@
 <div class="container quoteshow">
     <div class="row">
         <div class="col-md-12">
-          <p> Posted By: {{quote.name}}</p>
+          <p class="qtxt2"> Posted By: {{quote.name}}</p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-12">
-          <p>Quote author: {{quote.author}} </p>
-          <p>This goal will be complete in {{quote.completeDate|dateCount}} days</p>
-         <button (click)= 'quoteComplete(true)'>Complete</button>
-         <button (click)= 'quoteDelete(true)'>Delete Goal</button>
+          <p class="qtxt2">Quote author: {{quote.author}} </p>
+          <p class="qtxt2">This quote is here for: {{quote.completeDate|dateCount}} days</p>
+         
+         
          
           
         </div>

@@ -21,22 +21,27 @@
             <div class="container ">
                 <div class="row ">
                   <div class="col-md-8">
-                    <p>{{quote.quotess}}  </p>
+                    <p class="qtxt"><span class="btn btn-info">Quote: </span> {{quote.quotess}}  </p>
                   </div>
                   <div class="col-md-4">
-                    <p > on {{quote.completeDate|date|uppercase}}</p> 
+                    <p class="date"> on {{quote.completeDate|date|uppercase}}</p> 
                   </div>
                 </div>
                 
                 <div class="row">
                   <div class="col-md-6">
-                    <p>Quote author: {{quote.author}} </p>
-                    <button (click)='toggleDetails(i)'>Toggle Details</button>
+                    <p class="qtxt2">Quote author: {{quote.author}} </p>
+                    </div>
+                  <div class="col-md-6">
+                    <button class="btn btn-success" (click)='toggleDetails(i)'>View the quote Details</button>
                     <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
                     <!--<app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>-->
+                  
                   </div>
+                  
                 </div>
             </div>
+            <hr />
           </div>
 
         </div>
