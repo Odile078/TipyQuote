@@ -8,7 +8,7 @@ This is an angular application where users can create quotes and downvote or upv
 ## Author
  Odile Uwimpuhwe
 ## Live site
-
+(https://odile078.github.io/TipyQuote/)
 
 
 ## Development server
