@@ -8,7 +8,7 @@
     </div>
     <div class="col-md-7 background q2">
       <h2>Discover Quotes!</h2>
-      <p class="quotetxt">Find your Great Quotes here at TipyQuotes & share your favorite quotes.
+      <p class="quotetxt">Find your Great Quotes here at TipyQuote & share your favorite quotes.
 
       </p>
       <p class="quotetxt">Upvote and Downvote the quotes according to your satisfaction.</p>
@@ -35,7 +35,7 @@
                   <div class="col-md-6">
                     <button class="btn btn-success" (click)='toggleDetails(i)'>View the quote Details</button>
                     <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
-                    <!--<app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>-->
+                    
                   
                   </div>
                   
@@ -46,7 +46,7 @@
 
         </div>
         
-        <p *ngIf='quotes.length > 5'>Your goals are too many</p>
+        
     </div>
 
     

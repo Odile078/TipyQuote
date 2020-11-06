@@ -3,7 +3,7 @@
     <p class="formintro">You have Quotes to share, don't hesitate.</p>
     <p class="card card-container formintro">Share your Quotes</p>
     <div class="container-fluid">
-        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm'>
+        <form (ngSubmit)='submitQuote()' #quoteForm='ngForm' novalidate>
             <div class="form-group">
                 <label for="name">User Name</label>
                 <input type="text" class="form-control" [class.is-invalid]="name.invalid && name.touched" id="name" [(ngModel)]="newQuote.name" name="name" #name='ngModel' required>
