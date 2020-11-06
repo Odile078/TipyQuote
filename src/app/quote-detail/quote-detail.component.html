@@ -1,6 +1,18 @@
-<p>
-    {{quote.quotess}}
-</p>
-<p>This goal will be complete in {{quote.completeDate|dateCount}} days</p>
-<button (click)= 'quoteComplete(true)'>Complete</button>
-<button (click)= 'quoteDelete(true)'>Delete Goal</button>
+
+<div class="container quoteshow">
+    <div class="row">
+        <div class="col-md-12">
+          <p> Posted By: {{quote.name}}</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-8">
+          <p>Quote author: {{quote.author}} </p>
+          <p>This goal will be complete in {{quote.completeDate|dateCount}} days</p>
+         <button (click)= 'quoteComplete(true)'>Complete</button>
+         <button (click)= 'quoteDelete(true)'>Delete Goal</button>
+          
+        </div>
+      </div>
+
+</div>

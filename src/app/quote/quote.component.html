@@ -1,25 +1,25 @@
  
  <div>
     <h1>My Goals</h1>
-    <div class="container ">
+    <div class="container-fluid ">
+
       <div *ngFor='let quote of quotes;let i = index' >
-        <div class="container quoteshow">
+        <div class="container ">
             <div class="row ">
               <div class="col-md-8">
                 <p>{{quote.quotess}}  </p>
               </div>
               <div class="col-md-4">
-                phbvjkurivbrjkjknbgn
+                <p > on {{quote.completeDate|date|uppercase}}</p> 
               </div>
             </div>
+            
             <div class="row">
               <div class="col-md-6">
-                <p>fdbmngfthmksfgsf</p>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-md-6">
-                <p>fdbmngfthmksfgsf</p>
+                <p>Quote author: {{quote.author}} </p>
+                <button (click)='toggleDetails(i)'>Toggle Details</button>
+                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'completeQuote($event,i)'></app-quote-detail>
+                <app-quote-detail *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
               </div>
             </div>
         </div>
