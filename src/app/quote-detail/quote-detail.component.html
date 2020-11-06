@@ -11,8 +11,14 @@
           <p>This goal will be complete in {{quote.completeDate|dateCount}} days</p>
          <button (click)= 'quoteComplete(true)'>Complete</button>
          <button (click)= 'quoteDelete(true)'>Delete Goal</button>
+         
           
         </div>
+        <div class="container-fluid" id="buttons">
+            <button class="btn btn-info" (click)='upvote()'>{{quote.liked}} <i class="fa fa-thumbs-up" id="like"></i> Upvote</button> 
+            <button class="btn btn-success" id="hate" (click)='downvote()'>{{quote.disliked}} <i class="fa fa-thumbs-down" id="dislike"></i> Downvote</button> 
+            <button class="btn btn-danger"class="btn btn-sm btn-danger" id="del" (click)= 'quoteDelete(true)'><i class="fa fa-trash" id="delete"></i>Delete</button> 
+          </div>
       </div>
 
 </div>
